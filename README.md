@@ -1,19 +1,18 @@
 # SIMULADOR-GRAFICO-DE-CIRCUITOS-ELECTRONICOS-
 Proyecto final de POO-BMA15-Grupo 3
 
-from tkinter import *
-from tkinter import ttk
-from tkinter import messagebox  # Para mostrar ventanas emergentes
-import os
-import math  # Para cálculos que requieran π y otras funciones matemáticas
-class Aplicacion:
+    from tkinter import *
+    from tkinter import ttk
+    from tkinter import messagebox  # Para mostrar ventanas emergentes
+    import os
+    import math  # Para cálculos que requieran π y otras funciones matemáticas
+    class Aplicacion:
     def __init__(self):
         self.usuarios_registrados = {}
         self.cargar_usuarios()
         self.login = Tk()
         self.configurar_login()
-
-
+        
     def cargar_usuarios(self):
         if os.path.exists("usuarios.txt"):
             with open("usuarios.txt", "r") as file:
@@ -229,9 +228,9 @@ class Aplicacion:
             self.guardar_usuarios()
             ventana.destroy()
             self.etiqueta_error.config(text="Registro exitoso!", fg="green")
+        if __name__ == "__main__":
+            app = Aplicacion()
 
 
 
 
-if __name__ == "__main__":
-    app = Aplicacion()
